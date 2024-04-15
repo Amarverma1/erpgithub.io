@@ -19,7 +19,7 @@
             <div class="shape1"></div>
             <div class="shape2"></div>
             <div class="form">
-                <div class="img"> <img src="image/naivotech.png" alt="" class="form__img"></div>
+                <div class="img"> <img src="image/logo.png" alt="" class="form__img"></div>
 
                 <form class="form__content" action="admin_login.php" method="post">
                     <h1 class="form__title" style="margin-top: 0px;">Login<span style="font-size:25px;margin: 12px;">Admin</span></h1>

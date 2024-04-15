@@ -517,7 +517,7 @@ input[type=submit]:hover{
       <div class="form-group">
       
           <div class="col-sm-7">
-            <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter Email" / required>
+            <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter Admin Email" / required>
           </div>
       </div>
 

@@ -124,7 +124,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </ul>
       </li>
       <li>
-      <li>
+     <!-- <li>
         <a href="report.php">
       <i class="fa fa-id-badge" aria-hidden="true"></i>
           <span class="link_name">Report</span>
@@ -133,7 +133,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           <li><a class="link_name" href="#">Report</a></li>
         </ul>
       </li>
-      <li>" 
+      <li>" -->
         <!--<div class="iocn-link">
           <a href="#">
             <i class="fa fa-calendar" aria-hidden="true"></i>
