@@ -1,0 +1,306 @@
+
+
+
+   
+   /*--------------------------------------------------------------
+   # Profie Page
+   --------------------------------------------------------------*/
+   .profile .profile-card img {
+     max-width: 120px;
+   }
+   .updat-profil{
+    width: 400px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #1852b5;
+    color: #1852b5;
+   }
+   .main h1{
+     text-align: center;
+     font-size: 40px;
+   }
+   
+   .col-lg-9{
+     margin-left: 50px;
+     justify-content: center;
+     align-items: center;
+     justify-content: baseline;
+
+   }
+   
+   .profile .profile-card h2 {
+     font-size: 24px;
+     font-weight: 700;
+     color: #2c384e;
+     margin: 10px 0 0 0;
+   }
+   
+   .profile .profile-card h3 {
+     font-size: 18px;
+   }
+   
+   .profile .profile-card .social-links a {
+     font-size: 20px;
+     display: inline-block;
+     color:rgb(145, 5, 5);
+     line-height: 0;
+     margin-right: 10px;
+     transition: 0.3s;
+   }
+   
+   .profile .profile-card .social-links a:hover {
+     color: #012970;
+   }
+   
+   .profile .profile-overview .row {
+     margin-bottom: 20px;
+     font-size: 15px;
+   }
+   
+   .profile .profile-overview .card-title {
+     color: #012970;
+   }
+   
+   .profile .profile-overview .label {
+     font-weight: 600;
+     color: rgba(1, 41, 112, 0.6);
+   }
+   
+   .profile .profile-edit label {
+     font-weight: 600;
+     color: rgba(1, 41, 112, 0.6);
+   }
+   
+   .profile .profile-edit img {
+     max-width: 120px;
+   }
+   
+   
+   a {
+     text-decoration: none;
+     color: rgb(238, 77, 77);
+   }
+   
+   a:hover {
+     color:rgb(145, 5, 5);
+     text-decoration: none;
+   }
+   
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+     font-family: "Nunito", sans-serif;
+   }
+   
+   /*--------------------------------------------------------------
+   # Main
+   --------------------------------------------------------------*/
+   #main {
+     margin-top: 60px;
+     padding: 20px 30px;
+     transition: all 0.3s;
+   }
+   
+   @media (max-width: 1199px) {
+     #main {
+       padding: 20px;
+     }
+   }
+   
+   /*--------------------------------------------------------------
+   # Page Title
+   --------------------------------------------------------------*/
+   .pagetitle {
+     margin-bottom: 10px;
+   }
+   
+   .pagetitle h1 {
+     font-size: 24px;
+     margin-bottom: 0;
+     font-weight: 600;
+     color: rgb(184, 38, 38);
+   }
+   
+   
+
+   /* Card */
+   .card {
+     margin-bottom: 30px;
+     border: none;
+     border-radius: 5px;
+     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+   }
+   
+   .card-header,
+   .card-footer {
+     border-color: #ebeef4;
+     background-color: #fff;
+     color: #798eb3;
+     padding: 15px;
+   }
+   
+   .card-title {
+     padding: 20px 0 15px 0;
+     font-size: 18px;
+     font-weight: 500;
+     color: rgb(189, 57, 57);
+     font-family: "Poppins", sans-serif;
+   }
+   
+   .card-title span {
+     color: #899bbd;
+     font-size: 14px;
+     font-weight: 400;
+   }
+   
+   .card-body {
+     padding: 0 20px 20px 20px;
+   }
+   
+   .card-img-overlay {
+     background-color: rgba(255, 255, 255, 0.6);
+   }
+   
+  
+   
+  
+   
+   /* Bordered Tabs */
+   .nav-tabs-bordered {
+     border-bottom: 2px solid #ebeef4;
+   }
+   
+   .nav-tabs-bordered .nav-link {
+     margin-bottom: -2px;
+     border: none;
+     color: #2c384e;
+   }
+   
+   .nav-tabs-bordered .nav-link:hover,
+   .nav-tabs-bordered .nav-link:focus {
+     color: #f83a3a;
+   }
+   
+   .nav-tabs-bordered .nav-link.active {
+     background-color: #fff;
+     color: #f83a3a;
+     border-bottom: 2px solid #f75d5d;
+   }
+   
+  
+   
+   /* Info Cards */
+   .dashboard .info-card {
+     padding-bottom: 10px;
+   }
+   
+   .dashboard .info-card h6 {
+     font-size: 28px;
+     color: #012970;
+     font-weight: 700;
+     margin: 0;
+     padding: 0;
+   }
+   
+   .dashboard .card-icon {
+     font-size: 32px;
+     line-height: 0;
+     width: 64px;
+     height: 64px;
+     flex-shrink: 0;
+     flex-grow: 0;
+   }
+   
+   .dashboard .sales-card .card-icon {
+     color: #c53131;
+   
+     background: #f6f6fe;
+   }
+   
+   .dashboard .revenue-card .card-icon {
+     color: #2eca6a;
+     background: #e0f8e9;
+   }
+   
+   .dashboard .customers-card .card-icon {
+     color: #ff771d;
+     background: #ffecdf;
+   }
+   
+  
+  
+   
+ 
+   
+   /*--------------------------------------------------------------
+   # Footer
+   --------------------------------------------------------------*/
+  
+   .btn-primary {
+     background-color: rgb(196, 47, 47);
+   }
+   .btn-primary:hover{
+     background-color: red;
+   }
+   .btn-primary.active{
+     background-color: red;
+   }
+   .form-check-input:checked {
+     background-color: rgb(201, 55, 55);
+     border-color: red;
+   }
+   
+   
+   .dropdown-menu .dropdown-header{
+     color: rgb(169, 40, 40);
+   }
+   .header-nav .profile .dropdown-item {
+     color: rgb(169, 40, 40);
+   }
+   .header-nav .profile .dropdown-item:hover{
+     color: red;
+   }
+   .header-nav .profile .dropdown-header h6{
+     color: rgb(236, 5, 5);
+   }
+   .profile .profile-card h3{
+     color: rgb(166, 45, 45);
+   }
+   .profile .profile-card h2{
+     color: rgb(236, 5, 5);
+   }
+   .footer span{
+     color: rgb(236, 5, 5);
+   }
+   .footer .copyright{
+     color: rgb(160, 68, 68);
+   }
+   .profile .profile-overview .label{
+     color: rgb(169, 40, 40);
+   }
+   .profile .profile-edit label{
+     color: rgb(169, 40, 40);
+   }
+   .profile .profile-overview .card-title{
+     color: rgb(199, 27, 27);
+   }
+   .footer .credits {
+     color: rgb(160, 68, 68);
+   }
+   .breadcrumb a {
+     color: rgb(160, 68, 68);
+   }
+   .col-form-label{
+     color: rgb(188, 54, 54);
+   }
+   .input-group>.form-control:focus{
+     border-color: red;
+     
+   }
+   .form-control:focus{
+     border-color: red;
+     box-shadow: 0 0 10px 0 rgba(164, 26, 26, 0.15);
+   }
