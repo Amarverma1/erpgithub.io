@@ -313,7 +313,11 @@ html{
     display: none;
   }
 }
+<<<<<<< HEAD
 form input[type="text"],input[type="email"],input[type="file"],input[type="date"], select, textarea {
+=======
+form input[type="text"],input[type="email"], select, textarea {
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -428,7 +432,12 @@ input[type=submit]:hover{
 <!-- Content, Tables, Forms, Texts, Images started -->
 <div class="content">
 
+<<<<<<< HEAD
   <div class="rowtwo" id="student">
+=======
+<br>
+  <div class="rowtwo" id="teacher">
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
   
 
        <form method="post" class="form-horizontal col-md-6 col-md-offset-3">
@@ -436,32 +445,49 @@ input[type=submit]:hover{
       <div class="form-group">
       
           <div class="col-sm-7">
+<<<<<<< HEAD
             <input type="text" name="user_name"  class="form-control" id="input1" placeholder="Enter Student Username" / required>
+=======
+            <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter Admin Email" / required>
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
           </div>
       </div>
 
       <div class="form-group">
           <div class="col-sm-7">
+<<<<<<< HEAD
             <input type="text" name="password"  class="form-control" id="input1" placeholder="Enter Password" / required>
+=======
+            <input type="text" name="username"  class="form-control" id="input1" placeholder="Enter user name" / required>
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
           </div>
       </div>
 
       <div class="form-group">
           <div class="col-sm-7">
+<<<<<<< HEAD
             <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter email" / required>
+=======
+            <input type="text" name="password"  class="form-control" id="input1" placeholder="Password" / required>
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
           </div>
       </div>
 
       <div class="form-group">
 
           <div class="col-sm-7">
+<<<<<<< HEAD
             <input type="text" name="name"  class="form-control" id="input1" placeholder="Enter Full Name" / required>
+=======
+            <input type="text" name="fname"  class="form-control" id="input1" placeholder="Enter Full Name" / required>
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
           </div>
       </div>
 
       <div class="form-group">
 
         <div class="col-sm-7">
+<<<<<<< HEAD
       <input type="text" name="rollno"  class="form-control" id="input1" placeholder="Enter roll No" / required>
       </div>
       </div>
@@ -559,6 +585,12 @@ input[type=submit]:hover{
       </div>
   </div>
 
+=======
+      <input type="text" name="number"  class="form-control" id="input1" placeholder="Phone Number" / required>
+      </div>
+      </div>
+
+>>>>>>> 687d78ffde26f3fee026cb849cf47b875f21a8a9
       <input type="submit" class="btn btn-primary col-md-2 col-md-offset-8" value="Submit" name="button" />
     </form>
     
