@@ -9,7 +9,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>E Attendance Management System</title>
+<title>Navio || Admin Portal</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -353,7 +353,7 @@ body{
     <div class="profile-details">
     
       <div class="name-job">
-        <div class="profile_name"><?php echo $_SESSION['user_name'];?></div>
+        <div class="profile_name"><?php echo $_SESSION['username'];?></div>
        
 
 
@@ -373,16 +373,16 @@ body{
                <ul style="list-style:none;display: inline-flex;margin-left: 970px;margin-top: 10px;">
 
               
-                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['user_name'];?></h4></li>
+                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['username'];?></h4></li>
                   <li style="margin-top: 14px;margin-left: 8px;"> <a href="logout.php"><i class='bx bx-log-out' > </i></a></li>
                </ul>
                
           </div>
     </div>
 
-  <h1 style="margin-top:180px;font-size: 50px;">Admin Portal</h1>
+ 
   <center>
-
+  <h1 style="margin-top:180px;font-size: 50px;">Admin Portal</h1>
 </center>
 
 

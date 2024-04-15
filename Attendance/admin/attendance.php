@@ -20,7 +20,7 @@ session_start();
         $dp = date('Y-m-d');
         $course = $_POST['whichcourse'];
         
-        $stat = mysqli_query($conn,"insert into attendance(stat_id,course,st_status,stat_date) values('$stat_id','$course','$st_status','$dp')");
+        $stat = mysqli_query($conn,"insert into attendance() values('$stat_id','$course','$st_status','$dp')");
         
         $att_msg = "Attendance Recorded.";
 

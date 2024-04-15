@@ -11,10 +11,10 @@ include('connect.php');
 //data insertion
 try{
 
-  //checking if the data comes from teachers form
+  //checking if the data comes from admins form
 if(isset($_POST['button'])){
 
-    //teachers data insertion to the database table "teachers"
+    //teachers data insertion to the database table "admin"
     $result = mysqli_query($conn,"insert into admininfo( email, username, password, fname, phone) values('$_POST[email]','$_POST[username]','$_POST[password]','$_POST[fname]','$_POST[number]')");
     $success_msg = "Admin added successfully.";
 }
@@ -517,7 +517,7 @@ input[type=submit]:hover{
       <div class="form-group">
       
           <div class="col-sm-7">
-            <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter Email" / required>
+            <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter Admin Email" / required>
           </div>
       </div>
 

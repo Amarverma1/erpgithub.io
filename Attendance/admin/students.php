@@ -403,7 +403,7 @@ table tbody tr td{
     <div class="profile-details">
       
       <div class="name-job">
-        <div class="profile_name"><?php echo $_SESSION['user_name'];?></div>
+        <div class="profile_name"><?php echo $_SESSION['username'];?></div>
 
 
       </div>
@@ -422,16 +422,17 @@ table tbody tr td{
                <ul style="list-style:none;display: inline-flex;margin-left: 970px;margin-top: 10px;">
 
         
-                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['user_name'];?></h4></li>
+                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['username'];?></h4></li>
                   <li style="margin-top: 14px;margin-left: 8px;"> <a href="logout.php"><i class='bx bx-log-out' > </i></a></li>
                </ul>
                
           </div>
     </div>
 
-  <h1>Students</h1>
+ 
   <center>
-
+  <h1>Students Data</h1>
+</br></br></br>
 <div class="row">
 
   <div class="content">
@@ -439,30 +440,32 @@ table tbody tr td{
     <br>
     <form method="post" action="">
 
-      <input type="text" name="sr_batch" id="batch" placeholder="Batch (ex. 2020)">
-      <input type="submit" name="sr_btn" value="Go!" id="button">
+      <input type="text" name="Year" id="batch" placeholder="Batch (ex. 2024)">
+      <input type="submit" name="button" value="Go!" id="button">
     </form>
     <br>
     <table class="table table-stripped" >
       <thead>
         <tr>
-          <th scope="col" >Registration No.</th>
+          <th scope="col" >Roll No.</th>
           <th scope="col">Name</th>
-          <th scope="col">Department</th>
-          <th scope="col">Batch</th>
-          <th scope="col">Semester</th>
-          <th scope="col">Email</th>
+          <th scope="col">Course</th>
+          <th scope="col">DOB</th>
+          <th scope="col">Father Name</th>
+          <th scope="col">Mobile No.</th>
+          <th scope="col">School Name</th>
+          <th scope="col">City</th>
         </tr>
       </thead>
 
    <?php
 
-    if(isset($_POST['sr_btn'])){
+    if(isset($_POST['button'])){
      
-     $srbatch = $_POST['sr_batch'];
+     $Year = $_POST['Year'];
      $i=0;
      
-     $all_query = mysqli_query($conn,"select * from students where students.st_batch = '$srbatch' order by st_id asc ");
+     $all_query = mysqli_query($conn,"select * from users where users.Year = '$Year' order by id asc ");
      
      while ($data = mysqli_fetch_array($all_query)) {
        $i++;
@@ -470,12 +473,14 @@ table tbody tr td{
      ?>
   <tbody>
      <tr>
-       <td><?php echo $data['st_id']; ?></td>
-       <td><?php echo $data['st_name']; ?></td>
-       <td><?php echo $data['st_dept']; ?></td>
-       <td><?php echo $data['st_batch']; ?></td>
-       <td><?php echo $data['st_sem']; ?></td>
-       <td><?php echo $data['st_email']; ?></td>
+       <td><?php echo $data['rollno']; ?></td>
+       <td><?php echo $data['name']; ?></td>
+       <td><?php echo $data['Course']; ?></td>
+       <td><?php echo $data['DOB']; ?></td>
+       <td><?php echo $data['fathername']; ?></td>
+       <td><?php echo $data['number']; ?></td>
+       <td><?php echo $data['Schoolname']; ?></td>
+       <td><?php echo $data['city']; ?></td>
      </tr>
   </tbody>
 

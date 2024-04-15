@@ -383,7 +383,7 @@ table tbody tr td{
         </ul>
       </li>
      
-      <li>
+      <!--<li>
         <a href="report.php">
          <i class="fa fa-check" aria-hidden="true"></i>
 
@@ -393,14 +393,14 @@ table tbody tr td{
         <ul class="sub-menu blank">
           <li><a class="link_name" href="#">Report</a></li>
         </ul>
-      </li>
+      </li>-->
      
       
       <li>
     <div class="profile-details">
   
       <div class="name-job">
-        <div class="profile_name"><?php echo $_SESSION['user_name'];?></div>
+        <div class="profile_name"><?php echo $_SESSION['username'];?></div>
   
 
 
@@ -419,16 +419,17 @@ table tbody tr td{
 
                <ul style="list-style:none;display: inline-flex;margin-left: 970px;margin-top: 10px;">
  
-                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['user_name'];?></h4></li>
+                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['username'];?></h4></li>
                   <li style="margin-top: 14px;margin-left: 8px;"> <a href="logout.php"><i class='bx bx-log-out' > </i></a></li>
                </ul>
                
           </div>
     </div>
 
-  <h1>Teachers</h1>
+ 
   <center>
-
+  <h1>Teachers</h1>
+</br></br></br></br>
 <div class="row">
 
   <div class="content">
@@ -437,11 +438,11 @@ table tbody tr td{
     <table class="table table=stripped">
         <thead>  
           <tr>
-            <th scope="col">Teacher ID</th>
+            <th scope="col">Lecturers ID</th>
             <th scope="col">Name</th>
             <th scope="col">Department</th>
             <th scope="col">Email</th>
-            <th scope="col">Course</th>
+            <th scope="col">Contect</th>
           </tr>
         </thead>
 

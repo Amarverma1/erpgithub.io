@@ -14,20 +14,12 @@ include('connect.php');
   try{
 
     //checking if the data comes from students form
-    if(isset($_POST['std'])){
+    if(isset($_POST['button'])){
 
-      //students data insertion to database table "students"
-        $result = mysqli_query($conn,"insert into students(st_id,st_name,st_dept,st_batch,st_sem,st_email) values('$_POST[st_id]','$_POST[st_name]','$_POST[st_dept]','$_POST[st_batch]','$_POST[st_sem]','$_POST[st_email]')");
+      //students data insertion to database table "users"
+        $result = mysqli_query($conn,"insert into users( user_name, password, email, name, rollno, Course, Year, DOB, number, fathername, mothername, gender, photo, Address, Schoolname, attendence, performance, city, fee) values('$_POST[user_name]','$_POST[password]','$_POST[email]','$_POST[name]','$_POST[rollno]','$_POST[Course]','$_POST[Year]','$_POST[DOB]','$_POST[number]','$_POST[fathername]','$_POST[mothername]','$_POST[gender]','$_POST[photo]','$_POST[Address]','$_POST[Schoolname]','$_POST[attendence]','$_POST[performance]','$_POST[city]','$_POST[fee]')");
         $success_msg = "Student added successfully.";
 
-    }
-
-        //checking if the data comes from teachers form
-        if(isset($_POST['tcr'])){
-
-          //teachers data insertion to the database table "teachers"
-          $res = mysqli_query($conn,"insert into teachers(tc_id,tc_name,tc_dept,tc_email,tc_course) values('$_POST[tc_id]','$_POST[tc_name]','$_POST[tc_dept]','$_POST[tc_email]','$_POST[tc_course]')");
-          $success_msg = "Teacher added successfully.";
     }
 
   }
@@ -43,10 +35,10 @@ include('connect.php');
 <html lang="en">
 <!-- head started -->
 <head>
-<title>Add User</title>
+<title>Add Students</title>
 <meta charset="UTF-8">
 
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
   <!-- Latest compiled and minified CSS -->
  >
    
@@ -321,20 +313,8 @@ html{
     display: none;
   }
 }
- form input[type="text"],input[type="email"], select, textarea {
+form input[type="text"],input[type="email"],input[type="file"],input[type="date"], select, textarea {
   width: 50%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  color: black;
-  outline: 0px;
-}
-input[type='reg'],input[type='mail']{
-  width: 300%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -356,10 +336,6 @@ form input[type=submit] {
 }
 input[type=submit]:hover{
   background-color: green;
-}
-#student{
-  margin-left: 150px;
-  margin-top: 50px;
 }
 #student_button{
   width: 300%;
@@ -387,39 +363,35 @@ input[type=submit]:hover{
       </li>
       <li>
         <div class="iocn-link">
-          <a href="signup.php">
+          <a href="#index_new.php">
         <i class="fa fa-plus" aria-hidden="true"></i>
 
-            <span class="link_name">Add User</span>
+            <span class="link_name">Add Students</span>
           </a>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Add User</a></li>
+          <li><a class="link_name" href="#">Add Students</a></li>
         </ul>
       </li>
       <li>
         <div class="iocn-link">
-          <a href="index_new.php">
+          <a href="add_admin.php">
         <i class="fa fa-plus" aria-hidden="true"></i>
 
-            <span class="link_name">Add Data</span>
+            <span class="link_name">Add Admin</span>
           </a>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Add Data</a></li>
+          <li><a class="link_name" href="#">Add Admin</a></li>
         </ul>
       </li>
-     
-     
-      
-     
      
       
       <li>
     <div class="profile-details">
     
       <div class="name-job">
-        <div class="profile_name"><?php echo $_SESSION['user_name'];?></div>
+        <div class="profile_name"><?php echo $_SESSION['username'];?></div>
         
 
 
@@ -439,14 +411,14 @@ input[type=submit]:hover{
                <ul style="list-style:none;display: inline-flex;margin-left: 970px;margin-top: 10px;">
 
                
-                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['user_name'];?></h4></li>
+                 <li style="margin-top: 12px;margin-left: 10px;"><h4><?php echo $_SESSION['username'];?></h4></li>
                   <li style="margin-top: 14px;margin-left: 8px;"> <a href="logout.php"><i class='bx bx-log-out' > </i></a></li>
                </ul>
                
           </div>
     </div>
-    <center>
-      <h1>Add User</h1>
+<center>
+      <h1>Add Students Information</h1>
 <!-- Error or Success Message printint started -->
 <div class="message">
         <?php if(isset($success_msg)) echo $success_msg; if(isset($error_msg)) echo $error_msg; ?>
@@ -456,107 +428,146 @@ input[type=submit]:hover{
 <!-- Content, Tables, Forms, Texts, Images started -->
 <div class="content">
 
-  <center> Select: <a href="#teacher">Teacher</a> | <a href="">Student</a> <br></center>
-
-  <div class="row" id="student">
-
-
-
-      <form method="post" class="form-horizontal col-md-6 col-md-offset-3" id="student">
-      <h4>Add Student's Information</h4>
-      <div class="form-group">
-         
-          <div class="col-sm-7">
-            <input type="reg" name="st_id"  class="form-control" id="input1" placeholder="student reg. no." / required>
-          </div>
-      </div>
-
-      <div class="form-group">
-
-          <div class="col-sm-7">
-            <input type="reg" name="st_name"  class="form-control" id="input1" placeholder="student full name" / required>
-          </div>
-      </div>
-
-      <div class="form-group">
-      
-          <div class="col-sm-7">
-            <input type="reg" name="st_dept"  class="form-control" id="input1" placeholder="department ex. CSE" / required>
-          </div>
-      </div>
-
-      <div class="form-group">
-        
-          <div class="col-sm-7">
-            <input type="reg" name="st_batch"  class="form-control" id="input1" placeholder="batch e.x 2020" / required>
-          </div>
-      </div>
-
-      <div class="form-group">
-  
-          <div class="col-sm-7">
-            <input type="reg" name="st_sem"  class="form-control" id="input1" placeholder="semester ex. Fall-15" / required>
-          </div>
-      </div>
-
-      <div class="form-group">
-          
-          <div class="col-sm-7">
-            <input type="mail" name="st_email"  class="form-control" id="input1" placeholder="valid email" / required>
-          </div>
-      </div>
-
-
-      <input type="submit" class="btn btn-primary col-md-2 col-md-offset-8" value="Add Student" name="std" / id="student_button">
-    </form>
-
-  </div>
-<br><br><br>
-  <div class="rowtwo" id="teacher">
+  <div class="rowtwo" id="student">
   
 
        <form method="post" class="form-horizontal col-md-6 col-md-offset-3">
-        <h4>Add Teacher's Information</h4>
+
       <div class="form-group">
       
           <div class="col-sm-7">
-            <input type="text" name="tc_id"  class="form-control" id="input1" placeholder="teacher's id" / required>
+            <input type="text" name="user_name"  class="form-control" id="input1" placeholder="Enter Student Username" / required>
           </div>
       </div>
 
       <div class="form-group">
           <div class="col-sm-7">
-            <input type="text" name="tc_name"  class="form-control" id="input1" placeholder="teacher full name" / required>
+            <input type="text" name="password"  class="form-control" id="input1" placeholder="Enter Password" / required>
           </div>
       </div>
 
       <div class="form-group">
           <div class="col-sm-7">
-            <input type="text" name="tc_dept"  class="form-control" id="input1" placeholder="department ex. CSE" / required>
+            <input type="text" name="email"  class="form-control" id="input1" placeholder="Enter email" / required>
           </div>
       </div>
 
       <div class="form-group">
 
           <div class="col-sm-7">
-            <input type="email" name="tc_email"  class="form-control" id="input1" placeholder="valid email" / required>
+            <input type="text" name="name"  class="form-control" id="input1" placeholder="Enter Full Name" / required>
           </div>
       </div>
 
       <div class="form-group">
-   
-          <div class="col-sm-7">
-            <input type="text" name="tc_course"  class="form-control" id="input1" placeholder="subject ex. Software Engineering" / required>
-          </div>
+
+        <div class="col-sm-7">
+      <input type="text" name="rollno"  class="form-control" id="input1" placeholder="Enter roll No" / required>
+      </div>
       </div>
 
-      <input type="submit" class="btn btn-primary col-md-2 col-md-offset-8" value="Add Teacher" name="tcr" />
+      <div class="form-group">
+      
+      <div class="col-sm-7">
+        <input type="text" name="Course"  class="form-control" id="input1" placeholder="Course" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-sm-7">
+        <input type="text" name="Year"  class="form-control" id="input1" placeholder="Enter Year" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-sm-7">
+        <input type="date" name="DOB"  class="form-control" id="input1" placeholder="Enter DOB" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+
+      <div class="col-sm-7">
+        <input type="text" name="number"  class="form-control" id="input1" placeholder="Enter Mobile Number" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+
+  <div class="col-sm-7">
+  <input type="text" name="fathername"  class="form-control" id="input1" placeholder="Enter Father Name" / required>
+  </div>
+  </div>
+
+  <div class="form-group">
+      
+    <div class="col-sm-7">
+        <input type="text" name="mothername"  class="form-control" id="input1" placeholder="Enter Mother Name" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-sm-7">
+        <input type="text" name="gender"  class="form-control" id="input1" placeholder="gender" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+
+      <div class="col-sm-7">
+        <input type="text" name="Address"  class="form-control" id="input1" placeholder="Enter  Student Address" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-7">
+  <input type="text" name="Schoolname"  class="form-control" id="input1" placeholder="Enter School Name" / required>
+  </div>
+  </div>
+
+  <div class="form-group">
+      
+      <div class="col-sm-7">
+        <input type="text" name="attendence"  class="form-control" id="input1" placeholder="Enter Attendence" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-sm-7">
+        <input type="text" name="performance"  class="form-control" id="input1" placeholder="Enter performance" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-sm-7">
+        <input type="text" name="city"  class="form-control" id="input1" placeholder="Enter city" / required>
+      </div>
+  </div>
+
+  <div class="form-group">
+
+      <div class="col-sm-7">
+        <input type="text" name="fee"  class="form-control" id="input1" placeholder="Enter fee" / required>
+      </div>
+  </div>
+
+  
+  <div class="form-group">
+      <div class="col-sm-7">
+        <input type="file" name="photo"  class="form-control" id="input1" placeholder="Choose Photo" / required>
+      </div>
+  </div>
+
+      <input type="submit" class="btn btn-primary col-md-2 col-md-offset-8" value="Submit" name="button" />
     </form>
     
   </div>
 
 
 </div><br>
+<br>
+
 <!-- Contents, Tables, Forms, Images ended -->
 
 </center>
